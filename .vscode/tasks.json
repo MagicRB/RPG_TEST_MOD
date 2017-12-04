@@ -1,0 +1,72 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build",
+			"type": "shell",
+			"windows": {
+				"command": "cd build; cmake .. -G 'MinGW Makefiles'; make"
+			},
+			"command": "cd build && cmake .. && make",
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "Build & Run",
+			"type": "shell",
+			"windows": {
+				"command": "cd build; cmake .. -G 'MinGW Makefiles'; make; cd bin; cp SFML_TEST ../../run; cd ../../run; ./SFML_TEST"
+			},
+			"command": "cd build && cmake .. && make && cd bin && cp SFML_TEST ../../run && cd ../../run && ./SFML_TEST",
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "Debug",
+			"type": "shell",
+			"command": "cd build/bin && gdb SFML_TEST",
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Build & Debug",
+			"type": "shell",
+			"command": "cd build && cmake .. && make && cd bin && gdb SFML_TEST",
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Inject library",
+			"type": "shell",
+			"command": "cd build && cp *.so ../../SFML_RPG/run/Mods ",
+			"group": "build",
+			"presentation": {
+				"reveal": "always",
+				"panel": "new"
+			},
+			"problemMatcher": []
+		}
+	]
+}
