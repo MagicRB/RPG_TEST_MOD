@@ -1,3 +1,0 @@
-/home/main/PROGRAMMING/C++/RPG_TEST_MOD/build/CMakeFiles/rebuild_cache.dir
-/home/main/PROGRAMMING/C++/RPG_TEST_MOD/build/CMakeFiles/edit_cache.dir
-/home/main/PROGRAMMING/C++/RPG_TEST_MOD/build/CMakeFiles/RPG_TEST_MOD.dir
