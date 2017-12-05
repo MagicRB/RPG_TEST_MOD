@@ -2,7 +2,9 @@
 
 #include <iostream>
 
-void initializeMod()
+#include "test.hpp"
+
+void initializeMod(goManager* gom)
 {
-    std::cout << "Hello from mod!" << std::endl;
+    gom->go_vector.push_back(new test());
 }

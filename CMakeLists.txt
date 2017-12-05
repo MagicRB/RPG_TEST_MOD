@@ -3,7 +3,7 @@ project(RPG_TEST_MOD)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(include)
+include_directories(include external-include)
 
 file(GLOB SOURCES "src/*.cpp" "include/*.h")
 
