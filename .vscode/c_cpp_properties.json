@@ -49,7 +49,8 @@
                     "/usr/include/x86_64-linux-gnu",
                     "/usr/include",
                     "${workspaceRoot}",
-                    "${workspaceRoot}/include"
+                    "${workspaceRoot}/include",
+                    "${workspaceRoot}/external-include"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""

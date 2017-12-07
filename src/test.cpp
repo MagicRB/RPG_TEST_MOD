@@ -4,7 +4,7 @@
 
 void test::render(sf::RenderWindow* window)
 {
-    std::cout << "test object....." << std::endl;
+    std::cout << "test object,,," << std::endl;
 }
 
 test::test()
