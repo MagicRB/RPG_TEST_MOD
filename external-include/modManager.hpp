@@ -5,13 +5,15 @@
 #include <map>
 #include <string>
 
+#include "goManager.hpp"
+
 class modManager
 {
     public:
 
         std::map<std::string, void*> mods;
 
-        void loadMod(std::string mod_name, std::string path);
+        void loadMod(std::string mod_name, std::string path, goManager* gom);
 
         void closeAllMods();
 

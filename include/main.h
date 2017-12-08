@@ -1,12 +1,12 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
-#include "goManager.hpp"
+#include "ModdingAPI.hpp"
 
 extern "C"
 {
 
-    extern void initializeMod(goManager* gom);
+    extern void initializeMod(modAPI* mapi);
 
 }
 

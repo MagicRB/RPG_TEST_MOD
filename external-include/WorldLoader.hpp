@@ -6,12 +6,13 @@
 #include "Tile.hpp"
 #include "TextureManager.hpp"
 #include "goManager.hpp"
+#include "ModdingAPI.hpp"
 #include "modManager.hpp"
 
 class WorldLoader
 {
     public:
-        void loadWorld(std::string world, TextureManager* texm, goManager* tm, modManager* mm);
+        void loadWorld(std::string world, TextureManager* texm, goManager* tm, modManager* mm, modAPI* mapi);
 
         std::map<std::string, Tile> tile_defs;
 
