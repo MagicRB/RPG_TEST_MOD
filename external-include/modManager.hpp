@@ -5,7 +5,7 @@
 #include <map>
 #include <string>
 
-#include "goManager.hpp"
+#include "ModdingAPI.hpp"
 
 class modManager
 {
@@ -13,7 +13,7 @@ class modManager
 
         std::map<std::string, void*> mods;
 
-        void loadMod(std::string mod_name, std::string path, goManager* gom);
+        void loadMod(std::string mod_name, std::string path, modAPI* mapi);
 
         void closeAllMods();
 

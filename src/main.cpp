@@ -25,11 +25,17 @@ std::vector<std::string> split(const char *str, char c = ' ')
     return result;
 }
 
+void controller(modAPI* mapi, sf::Event event)
+{
+    if (event.type == sf::Event::Closed) {
+		mapi->grtWindow()->close();
+	} else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Q) {
+		mapi->grtWindow()->close();
+	}
+}
+
 void loadFromWorldLine(modAPI* mapi, std::string line)
 {
-    // Tile* t = new Tile();
-    // mapi->grtGom()->go_vector.push_back(t);
-
     int i = 0;
 				
     std::string operation;
@@ -60,5 +66,6 @@ void loadFromWorldLine(modAPI* mapi, std::string line)
 
 void initializeMod(modAPI* mapi)
 {
+    mapi->sorControl(controller);
     mapi->steWorldFileEntry(loadFromWorldLine);
 }

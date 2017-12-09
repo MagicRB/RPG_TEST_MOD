@@ -11,10 +11,15 @@
 class modAPI
 {
     public:
-        TextureManager*     grtTexm();
-        void                sroTexm(TextureManager* rtexm);
-        goManager*          grtGom();
-        void                sroGom(goManager* rtexm);
+        TextureManager*                 grtTexm();
+        void                            sroTexm(TextureManager* rtexm);
+        goManager*                      grtGom();
+        void                            sroGom(goManager* rtexm);
+        sf::RenderWindow*               grtWindow();
+        void                            sroWindow(sf::RenderWindow* window);
+
+        void                            sorControl(std::function<void(modAPI*, sf::Event)> mcorapix);
+        std::function<void(modAPI*, sf::Event)>    gorControl();
 
         void steWorldFileEntry(std::function<void(modAPI*, std::string)> func);
         std::vector<std::function<void(modAPI*, std::string)>> getWorldFileEntryEV();
@@ -27,6 +32,9 @@ class modAPI
         
         TextureManager* ptexm;
         goManager*      pgom;
+        sf::RenderWindow*      pwindow;
+
+        std::function<void(modAPI*, sf::Event)> overrideControl;
 
         std::vector<std::function<void(modAPI*, std::string)>> WorldFileEntryEV;
 
